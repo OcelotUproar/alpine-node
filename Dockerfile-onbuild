@@ -1,4 +1,4 @@
-FROM ocelotuproar/alphine-node:5.3.0
+FROM ocelotuproar/alpine-node:5.7.1
 
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app

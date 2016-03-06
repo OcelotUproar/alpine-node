@@ -1,7 +1,7 @@
 FROM alpine:3.2
 # Thanks to https://github.com/mhart/alpine-node
 
-ENV VERSION=v5.3.0 NPM_VERSION=3
+ENV VERSION=v5.7.1 NPM_VERSION=3
 
 RUN apk add --update curl make gcc g++ python linux-headers paxctl libgcc libstdc++ binutils-gold && \
       curl -sSL https://nodejs.org/dist/${VERSION}/node-${VERSION}.tar.gz | tar -xz && \

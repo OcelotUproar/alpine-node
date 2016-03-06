@@ -1,10 +1,13 @@
-TAG=5.3.0
+TAG=5.7.1
 default: build
 
 build: 
-	docker build -t ocelotuproar/alphine-node:$(TAG) .
-	docker build -t ocelotuproar/alphine-node:$(TAG)-onbuild -f Dockerfile-onbuild .
+	docker build -t ocelotuproar/alpine-node:$(TAG) .
+	docker build -t ocelotuproar/alpine-node:$(TAG)-onbuild -f Dockerfile-onbuild .
+
+debug:
+	docker run -it ocelotuproar/alpine-node:$(TAG) /bin/sh
 
 push:
-	docker push ocelotuproar/alphine-node:$(TAG)
-	docker push ocelotuproar/alphine-node:$(TAG)-onbuild
+	docker push ocelotuproar/alpine-node:$(TAG)
+	docker push ocelotuproar/alpine-node:$(TAG)-onbuild
